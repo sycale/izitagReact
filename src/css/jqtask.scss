@@ -1,0 +1,213 @@
+@import "~bootstrap/scss/bootstrap";
+
+$black: #000000;
+$orange: orange;
+
+.body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1140px;
+
+  @media screen and (max-width: 1140px) {
+    max-width: 768px;
+  }
+
+  &__content-line {
+    margin-bottom: 15px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+
+button {
+  outline: 0 !important;
+}
+
+li a {
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $orange;
+  }
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $orange;
+  }
+}
+
+
+.header {
+  -webkit-box-shadow: 0px 0px 42px -21px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 0px 0px 42px -21px rgba(0, 0, 0, 0.28);
+  box-shadow: 0px 0px 42px -21px rgba(0, 0, 0, 0.28);
+
+  &__menu {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px;
+
+    @media screen and (max-width: 1140px) {
+      max-width: 768px;
+    }
+  }
+
+  &__menu-item-link {
+    font-size: 20px;
+    color: $black;
+
+    &:hover {
+      color: $orange;
+      text-decoration: none;
+    }
+  }
+
+  &__submenu {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    padding-top: 25px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 10;
+    width: 100%;
+    position: absolute;
+    top: 125px;
+    min-height: 456px;
+    background-color: $orange;
+    left: 0;
+    right: 0;
+
+    &--custom {
+      justify-content: space-around;
+    }
+    
+    @media screen and (max-width: 1140px) {
+      max-width: 768px;
+    }
+  }
+  &__hidden-mobile-menu {
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    background-color: $white;
+    left: 0;
+    max-height: calc(100% - 60px);
+    overflow: scroll;
+  }
+
+  &__mobile-menu-arrow {
+    width: 40px;
+  }
+
+  &__mobile-menu-button {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    align-self: flex-end;
+  }
+
+  &__mobile-burger {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__menu-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &--opened {
+      background-color: rgb(233, 233, 233);
+    }
+
+    &--desktop {
+      border-bottom: solid $white 4px;
+      &:hover {
+        cursor: pointer;
+        border-bottom: solid $orange 4px;
+
+        .header__menu-item-link {
+          color: $orange;
+        }
+
+        .header__submenu {
+          display: flex;
+        }
+      }
+    }
+
+    &--mobile {
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (max-width: 400px) {
+        // padding-left:15px;
+      }
+    }
+
+    &--controller {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 42px;
+    }
+    
+    @media screen and (max-width: 768px) {
+      padding-top: 10px;
+      margin-right: 0;
+    }
+  }
+
+  &__submenu-item-link {
+    font-size: 20px;
+    color: $black;
+
+    &:hover {
+      text-decoration: none;
+      color: $orange;
+    }
+  }
+
+  &__menu-item-link {
+    font-size: 20px;
+    color: $black;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: none;
+      color: $orange;
+    }
+  }
+
+  &__submenu-item {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
