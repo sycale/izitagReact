@@ -1,6 +1,5 @@
 import React, { Component, useState } from "react";
 import MobileMenu from "./MobileMenuItem";
-import Context from "./Context";
 
 const nodes = [
   { id: "1" },
